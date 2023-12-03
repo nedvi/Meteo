@@ -1,0 +1,18 @@
+body {
+    background-color: #24304d;
+    color: ghostwhite;
+    font-family: Arial, serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#city, #temp, #weatherText {
+    font-size: 30px;
+}
+
+#icon {
+    width: 100px;
+}
