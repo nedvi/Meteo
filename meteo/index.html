@@ -7,15 +7,40 @@
     <link id="favicon" rel="icon" type="image/x-icon" href="">
     <title>Meteo by Nedvi</title>
 </head>
-<body>
-    <h1>Meteo</h1>
-    <p id="city"></p>
-    <img id="icon" alt="Actual weather icon" src="">
-    <p id="weatherText"></p>
-    <p id="temp"></p>
-    <p id="feelslikeTemp"></p>
+<body onload="autoUpdateCurrentWeather(); startTime()">
+    <div class="navPanel">
+        <div>
+            <div id="meteo">Meteo</div>
+            <div id="clock"></div>
+        </div>
+    </div>
 
-    <p id="lastUpdated"></p>
-    <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"></a>
+    <div id="city"></div>
+
+    <div class="currentWeather">
+        <h2>Aktuálně</h2>
+        <img id="icon" alt="Actual weather icon" src="">
+        <p id="weatherText"></p>
+        <p id="temp"></p>
+        <p id="feelslikeTemp"></p>
+        <img id="sunrise" alt="Sunrise icon" src="res/img/sunrise.png">
+        <p id="currentSunrise"></p>
+        <img id="sunset" alt="Sunset icon" src="res/img/sunset.png">
+        <p id="currentSunset"></p>
+        <div class="currentRain">
+            <img id="currentRainIcon" alt="Rain icon" src="res/img/rain.png">
+            <p id="currentRain"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div id="lastUpdated"></div>
+        <div id="copyright">© Dominik Nedved</div>
+        <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"></a>
+        <p>Icons by</p>
+        <a href="https://www.flaticon.com/free-icons/sunset" title="sunset icons" target="_blank">kosonicon</a>
+        <p> & by</p>
+        <a href="https://www.flaticon.com/free-icons/drizzle" title="drizzle icons" target="_blank">Hexagon075</a>
+    </footer>
 </body>
 </html>
