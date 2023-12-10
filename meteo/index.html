@@ -12,6 +12,13 @@
         <div>
             <div id="meteo">Meteo</div>
             <div id="clock"></div>
+            <div>
+                <form class="searchBar" id="searchBarForm" action="" method="GET">
+                    <label for="newCity"></label>
+                    <input type="text" id="newCity" name="newCityInput" placeholder="Search city...">
+                    <input type="button" name="searchButton" id="searchButton" value="" onClick="updateCity(this.form)">
+                </form>
+            </div>
         </div>
     </div>
 
@@ -19,7 +26,7 @@
 
     <div class="currentWeather">
         <h2>Aktuálně</h2>
-        <img id="icon" alt="Actual weather icon" src="">
+        <img id="icon" alt="Current weather icon" src="">
         <p id="weatherText"></p>
         <p id="temp"></p>
         <p id="feelslikeTemp"></p>
@@ -33,10 +40,136 @@
         </div>
     </div>
 
+    <div class="forecastWeather">
+        <h2>Následující dny</h2>
+        <div class="forecastDays">
+
+            <h3 id="day1"></h3>
+
+            <div class="forecastDayIcons">
+                <img id="forecastDay1Icon" alt="Forecast day 1 icon" src="">
+            </div>
+
+            <div class="forecastDaysTexts">
+                <p id="forecastDay1Text"></p>
+                <p id="forecastDay1Temp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Day Cycle Icon" src="res/img/day.png">
+                <p id="forecastDay1MaxTemp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Night Cycle Icon" src="res/img/night.png">
+                <p id="forecastDay1MinTemp"></p>
+            </div>
+
+            <div class="forecastRain">
+                <img id="forecastDay1RainIcon" alt="Rain icon" src="res/img/rain.png">
+                <p id="forecastDay1Rain"></p>
+            </div>
+
+            <div class="forecastSunrise">
+                <img alt="Forecast Sunrise icon" src="res/img/sunrise.png">
+                <p id="forecastDay1Sunrise"></p>
+
+                <div class="forecastSunset">
+                    <img alt="Forecast Sunet icon" src="res/img/sunset.png">
+                    <p id="forecastDay1Sunset"></p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="forecastDays">
+
+            <h3 id="day2"></h3>
+
+            <div class="forecastDayIcons">
+                <img id="forecastDay2Icon" alt="Forecast day 2 icon" src="">
+            </div>
+
+            <div class="forecastDaysTexts">
+                <p id="forecastDay2Text"></p>
+                <p id="forecastDay2Temp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Day Cycle Icon" src="res/img/day.png">
+                <p id="forecastDay2MaxTemp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Night Cycle Icon" src="res/img/night.png">
+                <p id="forecastDay2MinTemp"></p>
+            </div>
+
+            <div class="forecastRain">
+                <img id="forecastDay2RainIcon" alt="Rain icon" src="res/img/rain.png">
+                <p id="forecastDay2Rain"></p>
+            </div>
+
+            <div class="forecastSunrise">
+                <img alt="Forecast Sunrise icon" src="res/img/sunrise.png">
+                <p id="forecastDay2Sunrise"></p>
+
+                <div class="forecastSunset">
+                    <img alt="Forecast Sunet icon" src="res/img/sunset.png">
+                    <p id="forecastDay2Sunset"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="forecastDays">
+
+            <h3 id="day3"></h3>
+
+            <div class="forecastDayIcons">
+                <img id="forecastDay3Icon" alt="Forecast day 3 icon" src="">
+            </div>
+
+            <div class="forecastDaysTexts">
+                <p id="forecastDay3Text"></p>
+                <p id="forecastDay3Temp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Day Cycle Icon" src="res/img/day.png">
+                <p id="forecastDay3MaxTemp"></p>
+            </div>
+
+            <div class="forecastDayCycle">
+                <img alt="Night Cycle Icon" src="res/img/night.png">
+                <p id="forecastDay3MinTemp"></p>
+            </div>
+
+            <div class="forecastRain">
+                <img id="forecastDay3RainIcon" alt="Rain icon" src="res/img/rain.png">
+                <p id="forecastDay3Rain"></p>
+            </div>
+
+            <div class="forecastSunrise">
+                <img alt="Forecast Sunrise icon" src="res/img/sunrise.png">
+                <p id="forecastDay3Sunrise"></p>
+
+                <div class="forecastSunset">
+                    <img alt="Forecast Sunet icon" src="res/img/sunset.png">
+                    <p id="forecastDay3Sunset"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <footer>
         <div id="lastUpdated"></div>
         <div id="copyright">© Dominik Nedved</div>
-        <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"></a>
+        <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank"><img src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"></a>
         <p>Icons by</p>
         <a href="https://www.flaticon.com/free-icons/sunset" title="sunset icons" target="_blank">kosonicon</a>
         <p> & by</p>

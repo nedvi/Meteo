@@ -5,6 +5,9 @@ body {
     margin: 0;
 }
 
+p {margin: 0;}
+h2 {font-size: 30px}
+
 /* =============== Navigation panel =============== */
 
 .navPanel {
@@ -39,6 +42,68 @@ body {
     align-items: center;
     position: absolute;
 }
+
+.searchBar {
+    float: right;
+    z-index: 100;
+    position: relative;
+    /*margin: auto;*/
+    background-color: rgb(36,48,77, 1);
+    padding: 0.5em;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 0.3em;
+    margin-right: 0.3em;
+}
+
+.searchBar input {
+    height: 32px;
+    vertical-align: center;
+    position: relative;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: rgb(36,48,77, 1);
+    border-radius: 20px;
+    border: 0;
+}
+
+.searchBar input:focus {
+    background-color: rgb(36,48,77, 1);
+    color: ghostwhite;
+    border: 0;
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+.searchBar input[type=button] {
+    border: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("res/img/search.png");
+    background-color: transparent; /* Ensure transparent background */
+    background-size: contain; /* Adjust image size to fit within the button */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center; /* Center the image within the button */
+    z-index: 101;
+    border-radius: 5px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.searchBar input[type=button]:hover {
+    background-color: rgb(0,114,145, 1);
+
+}
+
 /* =============== City heading =============== */
 #city {
     text-align: center;
@@ -52,8 +117,8 @@ body {
 .currentWeather {
     border: 1px solid white;
     border-radius: 20px;
-    height: 20rem;
-    width: clamp(360px, 20rem + 10vw, 60rem);
+    height: 22rem;
+    width: clamp(360px, 15rem + 10vw, 60rem);
     max-width: 100%;
     display: inline-block;
     position: relative;
@@ -62,8 +127,10 @@ body {
 
 .currentWeather h2 {
     margin: 0;
-    padding-top: 1em;
-    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    font-family: Arial, serif;
+    font-weight: lighter;
 }
 
 .currentWeather #icon {
@@ -84,7 +151,7 @@ body {
 
 #temp, #weatherText {
     font-size: 2rem;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.5em;
 }
 
 #sunrise {
@@ -126,25 +193,174 @@ body {
     padding: 15px 0 15px 0;
     display: inline-flex;
     margin: auto;
-    /*text-align: center;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
 }
 
 .currentRain p {
-    display:inline-flex;
+    display: inline-flex;
     margin: auto;
     padding: 0;
     vertical-align: middle;
     height: 67px;
-    /*padding-top: 25px;*/
-    /*position: absolute;*/
-    /*margin: auto;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
+
+/* =============== ForecastWeather =============== */
+
+.forecastWeather {
+    display: inline-block;
+    position: absolute;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: clamp(100px, 30rem + 50vw, 120rem);
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 22rem;
+    overflow: hidden;
+}
+
+.forecastWeather h2 {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, serif;
+    font-weight: lighter;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.forecastDays {
+    height: 80%;
+    width: 20vw;
+    display: inline-block;
+    background-color: rgb(0,114,145, 0.75);
+    border-radius: 20px;
+    /*margin-right: 10px;*/
+    margin-left: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.forecastDays h3 {
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.forecastDayIcons {
+    text-align: left;
+    float: left;
+}
+
+.forecastDayIcons img {
+    width: 84px;
+    padding: 1em;
+}
+
+.forecastDaysTexts {
+    font-size: 30px;
+    padding: 1em;
+}
+
+/*.forecastDayCycleIcons {*/
+/*    display: flex;*/
+/*    width: 32px;*/
+/*    float: left;*/
+/*    position: absolute;*/
+/*    margin-bottom: 30em;*/
+/*}*/
+
+.forecastDayCycle {
+    padding-top: 0.5em;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    float: left;
+
+}
+
+.forecastDayCycle p {
+    padding-left: 0.5em;
+}
+
+.forecastDayCycle img {
+    width: 32px;
+    padding-left: 1em;
+}
+
+.forecastRain {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: absolute;
+    /*left: 0;*/
+    width: 20vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.forecastRain img {
+    width: 32px;
+    padding: 15px 0 10px 0;
+    display: inline-flex;
+    margin: auto;
+}
+
+.forecastSunrise {
+    padding-top: 0.5em;
+    position: absolute;
+    width: 20vw;
+
+}
+
+.forecastSunrise img {
+    width: 32px;
+    float: right;
+    padding-right: 1em;
+}
+
+.forecastSunrise p {
+    float: right;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+}
+
+
+
+.forecastSunset {
+    display: flex;
+    position: relative;
+    float: right;
+    padding-top: 0.5em;
+    width: 20vw;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.forecastSunset img {
+    width: 32px;
+    float: right;
+    padding-right: 1em;
+}
+
+.forecastSunset p {
+    float: right;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+}
+
+
 
 /* =============== Footer =============== */
 
