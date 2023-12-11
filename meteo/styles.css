@@ -207,10 +207,10 @@ input:-webkit-autofill:active{
 
 .forecastWeather {
     display: inline-block;
-    position: absolute;
+    /*position: absolute;*/
     margin-right: 10px;
     margin-left: 10px;
-    width: clamp(100px, 30rem + 50vw, 120rem);
+    width: clamp(100px, 3rem + 60vw, 120rem);
     border: 1px solid white;
     border-radius: 20px;
     height: 22rem;
@@ -405,4 +405,10 @@ footer a {
 footer a:hover {
     color: aquamarine;
     text-decoration-line: underline;
+}
+
+.wrapper {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
 }
