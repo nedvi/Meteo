@@ -114,6 +114,12 @@ input:-webkit-autofill:active{
 
 /* =============== Current weather panel =============== */
 
+.currentAndDailyForecastWrapper {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .currentWeather {
     border: 1px solid white;
     border-radius: 20px;
@@ -334,8 +340,6 @@ input:-webkit-autofill:active{
     padding-top: 0.5em;
 }
 
-
-
 .forecastSunset {
     display: flex;
     position: relative;
@@ -360,7 +364,63 @@ input:-webkit-autofill:active{
     padding-top: 0.5em;
 }
 
+/* =============== Hour Forecast =============== */
 
+.hourForecastWrapper {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hourForecast {
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 24rem;
+    width: clamp(360px, 19rem + 70vw, 1000rem);
+    max-width: 100%;
+    justify-content: flex-start;
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.hourForecast h2 {
+    margin: 0;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    font-family: Arial, serif;
+    font-weight: lighter;
+    text-align: left;
+    display: flex;
+}
+
+.hourBar1 {
+    border-radius: 20px;
+    height: 10rem;
+    width: clamp(360px, 14rem + 70vw, 100rem);
+    justify-content: center;
+    background-color: rgb(0,114,145, 0.75);
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hourSection {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    font-size: 20px;
+    border-left: 1px solid rgb(36,48,77, 1);
+}
+
+.hourSection:first-child {
+    border-left: none;
+}
 
 /* =============== Footer =============== */
 
@@ -407,8 +467,3 @@ footer a:hover {
     text-decoration-line: underline;
 }
 
-.wrapper {
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-}

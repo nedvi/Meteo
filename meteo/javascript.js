@@ -43,6 +43,13 @@ async function getForecastWeather() {
         document.getElementById("forecastDay" + i + "Sunrise").innerHTML = forecastWeather.forecast.forecastday[i-1].astro.sunrise;
         document.getElementById("forecastDay" + i + "Sunset").innerHTML = forecastWeather.forecast.forecastday[i-1].astro.sunset;
     }
+    // Explicitne nastavena 0 pro index dne, protoz nas v pripade index stranky zajima jen dnesek
+    for (let hour = 0; hour <= 23; hour++) {
+        document.getElementById("hour" + hour + "Icon").src = "https:" + (forecastWeather.forecast.forecastday[0].hour[hour].condition.icon);
+        document.getElementById("hour" + hour + "Temp").innerHTML =forecastWeather.forecast.forecastday[0].hour[hour].temp_c + "°C";
+
+    }
+
 }
 
 function startTime() {
