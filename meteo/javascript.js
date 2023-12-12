@@ -46,8 +46,8 @@ async function getForecastWeather() {
     // Explicitne nastavena 0 pro index dne, protoz nas v pripade index stranky zajima jen dnesek
     for (let hour = 0; hour <= 23; hour++) {
         document.getElementById("hour" + hour + "Icon").src = "https:" + (forecastWeather.forecast.forecastday[0].hour[hour].condition.icon);
-        document.getElementById("hour" + hour + "Temp").innerHTML =forecastWeather.forecast.forecastday[0].hour[hour].temp_c + "°C";
-
+        document.getElementById("hour" + hour + "Temp").innerHTML = forecastWeather.forecast.forecastday[0].hour[hour].temp_c + "°C";
+        document.getElementById("hour" + hour + "Rain").innerHTML = forecastWeather.forecast.forecastday[0].hour[hour].precip_mm + " mm";
     }
 
 }
