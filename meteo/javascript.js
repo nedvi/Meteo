@@ -77,8 +77,8 @@ function getDayOfWeekString(dateString) {
 getCurrentWeather();
 getForecastWeather();
 function autoUpdateCurrentWeather() {
-    setInterval(getCurrentWeather, 5 * 60 * 1000)
-    setInterval(getForecastWeather, 5 * 60 * 1000)
+    setInterval(getCurrentWeather, 15 * 60 * 1000)
+    setInterval(getForecastWeather, 15 * 60 * 1000)
 }
 
 function updateCity(form) {
@@ -88,6 +88,4 @@ function updateCity(form) {
     getCurrentWeather();
     getForecastWeather()
 }
-
-
 
